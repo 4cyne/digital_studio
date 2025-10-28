@@ -1,1 +1,30 @@
-@import './reset.css';
+@import url(./reset.css);
+@import url(./components/header/header.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+
+  a {
+    color: #fff;
+  }
+
+  a,
+  span,
+  input {
+    display: inline-block;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .background__first {
+    background-image: url('../assets/backgrounds/fonstola-1.webp');
+    background-size: cover;
+  }
+}
