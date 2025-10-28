@@ -1,0 +1,44 @@
+@import './burger-toggle.css';
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #13131580;
+  width: 100%;
+}
+
+.header__container {
+  gap: 100px;
+  @media screen and (width < 1250px) {
+    width: 90%;
+    gap: 20px;
+  }
+}
+
+.navigate {
+  display: flex;
+  justify-content: center;
+}
+.navigate__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigate__item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 26px 5px 26px 5px;
+}
+.navigate__item:hover {
+  background-color: #6f6f7d1a;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.navigate__item:first-child a:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
