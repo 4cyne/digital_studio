@@ -1,6 +1,7 @@
-@import './reset.css';
-@import './components/header/header.css';
-@import './components/main/main.css';
+@use './reset.scss';
+@use './components/header/header.scss';
+@use './components/main/main.scss';
+@use './components/about/about.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -27,7 +28,7 @@ body {
   }
 
   .background__first {
-    background-image: url('../assets/backgrounds/fonstola-1.webp');
+    background-image: url('../../assets/backgrounds/fonstola-1.webp');
     background-size: cover;
   }
 }

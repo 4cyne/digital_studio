@@ -1,0 +1,153 @@
+@use '../../mixins.scss' as *;
+
+.about {
+  background-color: #ae9c9c40;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #ffff;
+    gap: 20px;
+    padding: 120px 10px 50px 10px;
+
+    @media screen and (max-width: 780px) {
+      justify-content: center;
+      gap: 2rem;
+    }
+    @media screen and (max-width: 400px) {
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+  &__header {
+    @include flex-title;
+    // display: flex;
+    // width: 100%;
+    // align-items: center;
+    // justify-content: space-between;
+
+    @media screen and (max-width: 780px) {
+      gap: 1rem;
+    }
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+      gap: 40px;
+      padding-bottom: 1rem;
+    }
+  }
+  &__logo {
+    width: 291px;
+    height: 90px;
+    @media screen and (max-width: 780px) {
+      width: 157px;
+      height: 48px;
+    }
+    @media screen and (max-width: 400px) {
+      order: 2;
+      display: none;
+    }
+  }
+  &__line {
+    width: 223px;
+    border-bottom: 1px solid #ffff;
+    @media screen and (max-width: 780px) {
+      width: 160px;
+    }
+    @media screen and (max-width: 400px) {
+      order: 1;
+      width: 172px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    letter-spacing: 0.2em;
+    @media screen and (max-width: 780px) {
+      font-size: 32px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    @media screen and (max-width: 400px) {
+      gap: 1rem;
+    }
+  }
+
+  &__image_container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 780px) {
+      flex: 0 0 20%;
+      transform: scale(0.5);
+    }
+    @media screen and (max-width: 400px) {
+      flex: 0;
+      transform: scale(0.5);
+    }
+  }
+  &__image {
+    position: absolute;
+    filter: blur(15px);
+    @media screen and (max-width: 400px) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__description {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 30px;
+
+    @media screen and (max-width: 780px) {
+      flex-shrink: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+      z-index: 1000;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+
+    &_bold {
+      font-size: 30px;
+      @media screen and (max-width: 780px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 400px) {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 400px) {
+      text-align: center;
+    }
+
+    &_year {
+      text-align: end;
+      @media screen and (max-width: 780px) {
+        text-align: start;
+      }
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+}
