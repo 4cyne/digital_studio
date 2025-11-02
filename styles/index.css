@@ -1,5 +1,6 @@
-@import url(./reset.css);
-@import url(./components/header/header.css);
+@import './reset.css';
+@import './components/header/header.css';
+@import './components/main/main.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -18,9 +19,11 @@ body {
   }
 
   .container {
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: min(95vw, max(65vw, 1000px));
   }
 
   .background__first {
