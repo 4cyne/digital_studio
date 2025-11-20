@@ -3,4 +3,26 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  gap: 100px;
+
+  &_title {
+    white-space: nowrap;
+    font-size: clamp(1.375em, 1.1071em + 0.5357vw, 1.75em);
+    letter-spacing: 0.2em;
+    font-weight: 300;
+  }
+
+  &_line {
+    width: 100%;
+    border-bottom: 1px solid #ffff;
+  }
+
+  @media screen and (width < 400px) {
+    flex-direction: column;
+    gap: 30px;
+
+    &_line {
+      width: 50%;
+    }
+  }
 }
