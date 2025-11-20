@@ -1,0 +1,68 @@
+@use '../../mixins' as *;
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 43px;
+  padding: 100px 0 80px 0;
+  color: #ffff;
+
+  &__header {
+    @include flex-title;
+
+    @media screen and (width < 800px) {
+      &_line {
+        margin: 0 -20px 0 0;
+      }
+    }
+    @media screen and (width < 400px) {
+      &_line {
+        margin: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media screen and (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__column {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 291px;
+
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
+
+    &_title {
+      font-size: 2em;
+      font-weight: 500;
+
+      @media screen and (width < 800px) {
+        font-size: 1.5em;
+      }
+      @media screen and (width < 400px) {
+        font-size: 1.375em;
+      }
+    }
+    &_text {
+      font-size: 1.25em;
+      font-weight: 500;
+      @media screen and (max-width: 800px) {
+        font-size: 1.125em;
+      }
+    }
+  }
+}
